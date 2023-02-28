@@ -603,6 +603,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4464941475679717067, guid: 4bb49e63ea1ef6a4f82857e2d1e3bb85, type: 3}
   m_PrefabInstance: {fileID: 4464941475964207701}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &328587148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5506205114187980227, guid: 4bb49e63ea1ef6a4f82857e2d1e3bb85, type: 3}
+  m_PrefabInstance: {fileID: 4464941475964207701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &344948447
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,6 +806,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7400004554213792344, guid: 4bb49e63ea1ef6a4f82857e2d1e3bb85, type: 3}
   m_PrefabInstance: {fileID: 4464941475964207701}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &578392358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328587148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fc3ea8423f7f7e4cbccb8617e03612e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwForce: 500
+  granadePrefab: {fileID: 2850375728483115454, guid: cb925d777f3131241b14eb45a0a0c1b1, type: 3}
 --- !u!1 &632324573
 GameObject:
   m_ObjectHideFlags: 0
@@ -3518,8 +3537,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -24.400024, y: 26.400024}
-  m_SizeDelta: {x: 45.8975, y: 51.2814}
+  m_AnchoredPosition: {x: -19.6566, y: 27.6499}
+  m_SizeDelta: {x: 55.3843, y: 53.7811}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2010573922
 MonoBehaviour:
@@ -3853,7 +3872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6866490823262061054, guid: b41b13c2a3add6d4e9a9c590d8b0f594, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.748
+      value: 5.256
       objectReference: {fileID: 0}
     - target: {fileID: 6866490823262061054, guid: b41b13c2a3add6d4e9a9c590d8b0f594, type: 3}
       propertyPath: m_LocalPosition.y
