@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerInteractions : MonoBehaviour
 {
+    [SerializeField] private Transform startPostion;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +25,13 @@ public class PlayerInteractions : MonoBehaviour
             Destroy(collider.gameObject);
         }
         
+        if (collider.gameObject.CompareTag("DeathFloor"))
+        {
+            GameManager.Instance.LoseHealth(50);
+            
+            GetComponent<CharacterController>().enabled = false;
+            this.gameObject.transform.position = startPostion.position;
+            GetComponent<CharacterController>().enabled = true;
+        }
     }
 }

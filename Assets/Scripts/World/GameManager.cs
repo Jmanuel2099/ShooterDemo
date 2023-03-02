@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {   [Header("Commponentes UI")]
@@ -20,7 +21,21 @@ public class GameManager : MonoBehaviour
     {
         ammoText.text = gunAmmo.ToString();
 
-        healthText.text = health.ToString();
-        
+        healthText.text = health.ToString();   
     }
+
+    public void LoseHealth(int healthToReduce)
+    {
+        health -= healthToReduce;
+        if (health <= 0)
+        {
+            ResetLevel();
+        }
+    }
+
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    
 }
