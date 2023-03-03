@@ -34,4 +34,12 @@ public class PlayerInteractions : MonoBehaviour
             GetComponent<CharacterController>().enabled = true;
         }
     }
+
+    private void OnCollisionEnter(Collision other) {
+        //When the player receives an enemy bullet
+        if (other.gameObject.CompareTag("EnemyBullet"))
+        {
+            GameManager.Instance.LoseHealth(10);
+        }
+    }
 }

@@ -17,8 +17,15 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        navMeshAgent.destination = destinations[0].transform.position;
-        player = FindObjectOfType<PlayerMovement>().gameObject;
+        if (destinations == null || destinations.Length == 0)
+        {
+            transform.gameObject.GetComponent<EnemyAI>().enabled = false;
+        }else
+        {
+            navMeshAgent.destination = destinations[0].transform.position;
+            player = FindObjectOfType<PlayerMovement>().gameObject;
+        }
+        
     }
 
     // Update is called once per frame
